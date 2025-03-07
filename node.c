@@ -14,7 +14,7 @@
 
 t_node	*new_node(int index, int value)
 {
-	t_node	*newNode;
+	t_node	*newnode;
 
 	newnode = malloc(sizeof(t_node));
 	if (!newnode)
@@ -26,4 +26,16 @@ t_node	*new_node(int index, int value)
 	return (newnode);
 }
 
-//void	insert_node_end(node **
+void	add_newnode(int index, int value, t_node *first)
+{
+	if (!first)
+		return ;
+	t_node *newnode = new_node(index, value);
+	if (!newnode)
+		return ;
+	t_node *last = first->prev;
+	last->next = newnode;
+	newnode->prev = last;
+	newnode->next = first;
+	first->prev = newnode;
+}

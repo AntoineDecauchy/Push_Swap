@@ -1,4 +1,16 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adecauch <adecauch@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/06 13:11:43 by adecauch          #+#    #+#             */
+/*   Updated: 2025/03/06 13:11:47 by adecauch         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
 
 int	ft_atoi(const char *str)
 {
@@ -28,4 +40,21 @@ int	ft_atoi(const char *str)
 
 int	main(int argc, char **argv)
 {
-	check_arg(argc, argv)
+	if (argc == 1)
+		return (1);
+	t_node	*premierA;
+	premierA = new_node(0, ft_atoi(argv[1]));
+	printf("%d", premierA->value);
+	int i = 2;
+	while (argv[i] != NULL)
+	{
+		add_newnode(i-1, ft_atoi(argv[i]), premierA);
+		i++;
+	}
+	t_node *stop = premierA->prev;
+	while (premierA != stop)
+	{
+		printf("%d\n", premierA->value);
+		premierA = premierA->next;
+	}
+}

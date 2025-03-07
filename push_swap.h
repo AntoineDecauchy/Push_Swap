@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
+# include <stdio.h>
 
 typedef struct node
 {
@@ -22,5 +23,8 @@ typedef struct node
 	struct node	*next;
 	struct node	*prev;
 }				t_node;
+
+t_node	*new_node(int index, int value);
+void	add_newnode(int index, int value, t_node *first);
 
 #endif
