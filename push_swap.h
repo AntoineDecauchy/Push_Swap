@@ -6,7 +6,7 @@
 /*   By: adecauch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:47:26 by adecauch          #+#    #+#             */
-/*   Updated: 2025/02/18 21:45:32 by adecauch         ###   ########.fr       */
+/*   Updated: 2025/03/31 14:33:10 by adecauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <stdio.h>
+# include <unistd.h>
 
 typedef struct node
 {

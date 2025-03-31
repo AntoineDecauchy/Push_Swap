@@ -6,7 +6,7 @@
 /*   By: adecauch <adecauch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 13:11:43 by adecauch          #+#    #+#             */
-/*   Updated: 2025/03/06 13:11:47 by adecauch         ###   ########.fr       */
+/*   Updated: 2025/03/31 14:58:40 by adecauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,9 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (1);
 	t_node	*premierA;
+	t_node	*premierB;
 	premierA = new_node(0, ft_atoi(argv[1]));
+	premierB = NULL;
 	printf("%d", premierA->value);
 	int i = 2;
 	while (argv[i] != NULL)
@@ -54,7 +56,8 @@ int	main(int argc, char **argv)
 	t_node *stop = premierA->prev;
 	while (premierA != stop)
 	{
-		printf("%d\n", premierA->value);
+		printf("%d, %d\n", premierA->value, premierA->index);
 		premierA = premierA->next;
 	}
+	printf("%d, %d\n", premierA->value, premierA->index);
 }
