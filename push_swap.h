@@ -36,6 +36,10 @@ void	rotate_a(t_node *headA);
 void	rotate_b(t_node *headB);
 void	rotate_r(t_node *headA, t_node *headB);
 
+void	reverse_rotate_a(t_node *headA);
+void	reverse_rotate_b(t_node *headB);
+void	reverse_rotate_r(t_node *headA, t_node *headB);
+
 void	putstr(char *str);
 
 #endif
