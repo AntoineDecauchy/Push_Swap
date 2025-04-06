@@ -6,7 +6,7 @@
 /*   By: adecauch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:47:26 by adecauch          #+#    #+#             */
-/*   Updated: 2025/03/31 14:33:10 by adecauch         ###   ########.fr       */
+/*   Updated: 2025/04/06 20:25:58 by adecauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,11 @@ typedef struct node
 
 t_node	*new_node(int index, int value);
 void	add_newnode(int index, int value, t_node *first);
+
+void	swap_a(t_node *headA);
+void	swap_b(t_node *headB);
+void	swap_s(t_node *headA, t_node *headB);
+
+void	putstr(char *str);
 
 #endif

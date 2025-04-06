@@ -6,7 +6,7 @@
 /*   By: adecauch <adecauch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 13:11:43 by adecauch          #+#    #+#             */
-/*   Updated: 2025/03/31 14:58:40 by adecauch         ###   ########.fr       */
+/*   Updated: 2025/04/06 20:29:15 by adecauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	t_node *stop = premierA->prev;
+	swap_s(premierA, premierB);
 	while (premierA != stop)
 	{
 		printf("%d, %d\n", premierA->value, premierA->index);
