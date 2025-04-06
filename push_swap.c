@@ -53,7 +53,7 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	t_node *stop = premierA->prev;
-	rotate_a(premierA);
+	rotate_r(premierA, premierB);
 	while (premierA != stop)
 	{
 		printf("%d, %d\n", premierA->value, premierA->index);

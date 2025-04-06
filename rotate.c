@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	rotate_a(t_node *headA)
+void	rotate(t_node *head)
 {
 	int		tmp_value;
 	int		tmp_index;
@@ -20,22 +20,46 @@ void	rotate_a(t_node *headA)
 
 	tmp_value = 0;
 	tmp_index = 0;
-	tmp_node = headA;
+	tmp_node = head;
+	while (head != tmp_node->prev)
+	{
+		tmp_value = head->value;
+		head->value = head->next->value;
+		head->next->value = tmp_value;
+		head = head->next;
+	}
+	head = tmp_node;
+	while (head != tmp_node->prev)
+	{
+		head->index = tmp_index;
+		tmp_index++;
+		head = head->next;
+	}
+}
+
+void	rotate_a(t_node *headA)
+{
 	if (headA == NULL)
 		return ;
-	while (headA != tmp_node->prev)
-	{
-		tmp_value = headA->value;
-		headA->value = headA->next->value;
-		headA->next->value = tmp_value;
-		headA = headA->next;
-	}
-	headA = tmp_node;
-	while (headA != tmp_node->prev)
-	{
-		headA->index = tmp_index;
-		tmp_index++;
-		headA = headA->next;
-	}
+	rotate(headA);
 	putstr("ra\n");
+}
+
+void	rotate_b(t_node *headB)
+{
+	if (headB == NULL)
+		return ;
+	rotate(headB);
+	putstr("rb\n");
+}
+
+void	rotate_r(t_node *headA, t_node *headB)
+{
+	if (headA == NULL && headB == NULL)
+		return ;
+	if (headA != NULL)
+		rotate(headA);
+	if (headB != NULL)
+		rotate(headB);
+	putstr("rr\n");
 }
