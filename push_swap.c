@@ -46,7 +46,6 @@ int	main(int argc, char **argv)
 	t_node	*premierB;
 	premierA = new_node(0, ft_atoi(argv[1]));
 	premierB = NULL;
-	printf("%d", premierA->value);
 	int i = 2;
 	while (argv[i] != NULL)
 	{
