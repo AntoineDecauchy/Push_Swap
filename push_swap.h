@@ -32,6 +32,8 @@ void	swap_a(t_node *headA);
 void	swap_b(t_node *headB);
 void	swap_s(t_node *headA, t_node *headB);
 
+void	rotate_a(t_node *headA);
+
 void	putstr(char *str);
 
 #endif
