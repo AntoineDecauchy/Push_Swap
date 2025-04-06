@@ -26,11 +26,15 @@ void	rotate_a(t_node *headA)
 	while (headA != tmp_node->prev)
 	{
 		tmp_value = headA->value;
-		tmp_index = headA->index;
 		headA->value = headA->next->value;
-		headA->index = headA->next->index;
 		headA->next->value = tmp_value;
-		headA->next->index = tmp_index;
+		headA = headA->next;
+	}
+	headA = tmp_node;
+	while (headA != tmp_node->prev)
+	{
+		headA->index = tmp_index;
+		tmp_index++;
 		headA = headA->next;
 	}
 	putstr("ra\n");
