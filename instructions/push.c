@@ -16,7 +16,7 @@ void	push_a(t_node **headA, t_node **headB)
 {
 	t_node	*node;
 
-	node = remove_node(headA);
+	node = remove_node(headB);
 	if (!node)
 		return ;
 	insert_node(headA, node);
@@ -30,7 +30,7 @@ void	push_b(t_node **headA, t_node **headB)
 {
 	t_node	*node;
 
-	node = remove_node(headB);
+	node = remove_node(headA);
 	if (!node)
 		return ;
 	insert_node(headB, node);
