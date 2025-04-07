@@ -60,18 +60,19 @@ int main(int argc, char **argv)
         printf("%d, %d\n", tmp->value, tmp->index);
         tmp = tmp->next;
     } while (tmp != premierA);
-
-	swap_a(premierA);
-    push_b(&premierA, &premierB);
-	push_b(&premierA, &premierB);
-	push_b(&premierA, &premierB);
-	rotate_r(premierA, premierB);
-	reverse_rotate_r(premierA, premierB);
-	swap_a(premierA);
-	push_a(&premierA, &premierB);
-	push_a(&premierA, &premierB);
-	push_a(&premierA, &premierB);
-    printf("Après push_b :\n");
+	if (argc == 3)
+		sort_2(premierA);
+	//swap_a(premierA);
+    //push_b(&premierA, &premierB);
+	//push_b(&premierA, &premierB);
+	//push_b(&premierA, &premierB);
+	//rotate_r(premierA, premierB);
+	//reverse_rotate_r(premierA, premierB);
+	//swap_a(premierA);
+	//push_a(&premierA, &premierB);
+	//push_a(&premierA, &premierB);
+	//push_a(&premierA, &premierB);
+    printf("Après tri:\n");
     printf("Pile A :\n");
     if (premierA)
     {
