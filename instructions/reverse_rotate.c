@@ -29,12 +29,7 @@ void	reverse_rotate(t_node *head)
 		head = head->prev;
 	}
 	head = tmp_node;
-	while (head != tmp_node->prev)
-	{
-		head->index = tmp_index;
-		tmp_index++;
-		head = head->next;
-	}
+	update_index(head);
 }
 
 void	reverse_rotate_a(t_node *headA)

@@ -82,3 +82,23 @@ void	insert_node(t_node **head, t_node *node)
 		*head = node;
 	}
 }
+
+void	update_index(t_node *head)
+{
+	t_node	*tmp_node;
+	int		index;
+
+	if (!head)
+		return ;
+	index = 0;
+	tmp_node = head;
+	//head->index = index;
+	//index++;
+	//head = head->next;
+	while (head != tmp_node->prev)
+	{
+		head->index = index;
+		index++;
+		head = head->next;
+	}
+}

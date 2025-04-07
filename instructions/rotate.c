@@ -28,13 +28,8 @@ void	rotate(t_node *head)
 		head->next->value = tmp_value;
 		head = head->next;
 	}
-	head = tmp_node;
-	while (head != tmp_node->prev)
-	{
-		head->index = tmp_index;
-		tmp_index++;
-		head = head->next;
-	}
+	head =tmp_node;
+	update_index(head);
 }
 
 void	rotate_a(t_node *headA)
