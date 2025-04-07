@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
-# include "./instructions/instructions.h"
 
 typedef struct node
 {
@@ -32,20 +31,20 @@ t_node	*remove_node(t_node **head);
 void	insert_node(t_node **head, t_node *node);
 void	update_index(t_node *head);
 
-//void	swap_a(t_node *headA);
-//void	swap_b(t_node *headB);
-//void	swap_s(t_node *headA, t_node *headB);
+void	swap_a(t_node *headA);
+void	swap_b(t_node *headB);
+void	swap_s(t_node *headA, t_node *headB);
 
-//void	push_a(t_node **headA, t_node **headB);
-//void	push_b(t_node **headA, t_node **headB);
+void	push_a(t_node **headA, t_node **headB);
+void	push_b(t_node **headA, t_node **headB);
 
-//void	rotate_a(t_node *headA);
-//void	rotate_b(t_node *headB);
-//void	rotate_r(t_node *headA, t_node *headB);
+void	rotate_a(t_node *headA);
+void	rotate_b(t_node *headB);
+void	rotate_r(t_node *headA, t_node *headB);
 
-//void	reverse_rotate_a(t_node *headA);
-//void	reverse_rotate_b(t_node *headB);
-//void	reverse_rotate_r(t_node *headA, t_node *headB);
+void	reverse_rotate_a(t_node *headA);
+void	reverse_rotate_b(t_node *headB);
+void	reverse_rotate_r(t_node *headA, t_node *headB);
 
 void	sort_two(t_node *head);
 
