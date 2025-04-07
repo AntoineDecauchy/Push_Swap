@@ -90,15 +90,12 @@ void	update_index(t_node *head)
 
 	if (!head)
 		return ;
-	index = 0;
 	tmp_node = head;
-	//head->index = index;
-	//index++;
-	//head = head->next;
-	while (head != tmp_node->prev)
+	index = 0;
+	head->index = index++;
+	while (head->next != tmp_node)
 	{
-		head->index = index;
-		index++;
 		head = head->next;
+		head->index = index++;
 	}
 }

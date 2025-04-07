@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+/*
 int	main(int argc, char **argv)
 {
 	if (argc == 1)
@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 		premierA = premierA->next;
 	}
 	printf("%d, %d\n", premierA->value, premierA->index);
-}/*
+}*/
 int main(int argc, char **argv)
 {
     if (argc == 1)
@@ -53,7 +53,6 @@ int main(int argc, char **argv)
         i++;
     }
 
-    // Affichage initial de la pile A
     printf("Pile A initiale :\n");
     t_node *stop = premierA->prev;
     t_node *tmp = premierA;
@@ -62,10 +61,16 @@ int main(int argc, char **argv)
         tmp = tmp->next;
     } while (tmp != premierA);
 
-    // Test d'un push_b (déplacer le premier élément de A vers B)
+	swap_a(premierA);
     push_b(&premierA, &premierB);
-
-    // Affichage après push_b
+	push_b(&premierA, &premierB);
+	push_b(&premierA, &premierB);
+	rotate_r(premierA, premierB);
+	reverse_rotate_r(premierA, premierB);
+	swap_a(premierA);
+	push_a(&premierA, &premierB);
+	push_a(&premierA, &premierB);
+	push_a(&premierA, &premierB);
     printf("Après push_b :\n");
     printf("Pile A :\n");
     if (premierA)
@@ -88,8 +93,7 @@ int main(int argc, char **argv)
             tmp = tmp->next;
         } while (tmp != premierB);
     }
-    else
-        printf("Pile B vide\n");
-
-    return (0);
-}*/
+	else
+		printf("Pile B vide\n");
+	return (0);
+}
