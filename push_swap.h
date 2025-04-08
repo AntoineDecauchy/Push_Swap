@@ -49,6 +49,6 @@ void	reverse_rotate_r(t_node *headA, t_node *headB);
 void	sort_two(t_node *head);
 
 void	putstr(char *str);
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 
 #endif
