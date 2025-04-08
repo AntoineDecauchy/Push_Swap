@@ -15,11 +15,9 @@
 void	reverse_rotate(t_node *head)
 {
 	int		tmp_value;
-	int		tmp_index;
 	t_node	*tmp_node;
 
 	tmp_value = 0;
-	tmp_index = 0;
 	tmp_node = head;
 	while (head != tmp_node->next)
 	{

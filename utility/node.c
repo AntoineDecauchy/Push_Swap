@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   node.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adecauch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: adecauch <adecauch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/18 21:51:41 by adecauch          #+#    #+#             */
-/*   Updated: 2025/02/18 22:15:10 by adecauch         ###   ########.fr       */
+/*   Created: 2025/04/08 03:21:12 by adecauch          #+#    #+#             */
+/*   Updated: 2025/04/08 03:21:17 by adecauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_node	*new_node(int index, int value)
 {
@@ -80,22 +80,5 @@ void	insert_node(t_node **head, t_node *node)
 		tmp_node->next = node;
 		(*head)->prev = node;
 		*head = node;
-	}
-}
-
-void	update_index(t_node *head)
-{
-	t_node	*tmp_node;
-	int		index;
-
-	if (!head)
-		return ;
-	tmp_node = head;
-	index = 0;
-	head->index = index++;
-	while (head->next != tmp_node)
-	{
-		head = head->next;
-		head->index = index++;
 	}
 }

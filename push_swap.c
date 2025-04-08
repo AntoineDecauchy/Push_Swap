@@ -54,7 +54,7 @@ int main(int argc, char **argv)
     }
 
     printf("Pile A initiale :\n");
-    t_node *stop = premierA->prev;
+    //t_node *stop = premierA->prev;
     t_node *tmp = premierA;
     do {
         printf("%d, %d\n", tmp->value, tmp->index);
@@ -72,6 +72,7 @@ int main(int argc, char **argv)
 	//push_a(&premierA, &premierB);
 	//push_a(&premierA, &premierB);
 	//push_a(&premierA, &premierB);
+	printf("size = %d\n", size_list(premierA));
     printf("Après tri:\n");
     printf("Pile A :\n");
     if (premierA)
@@ -96,5 +97,6 @@ int main(int argc, char **argv)
     }
 	else
 		printf("Pile B vide\n");
+	free_list(premierA);
 	return (0);
 }

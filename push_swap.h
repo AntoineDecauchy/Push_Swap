@@ -29,7 +29,10 @@ t_node	*new_node(int index, int value);
 void	add_newnode(int index, int value, t_node *first);
 t_node	*remove_node(t_node **head);
 void	insert_node(t_node **head, t_node *node);
+
 void	update_index(t_node *head);
+int		size_list(t_node *head);
+void	free_list(t_node *head);
 
 void	swap_a(t_node *headA);
 void	swap_b(t_node *headB);
