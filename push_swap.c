@@ -43,13 +43,13 @@ int main(int argc, char **argv)
     t_node *premierA;
     t_node *premierB;
 
-    premierA = new_node(0, ft_atoi(argv[1]));
+    premierA = new_node(-1, ft_atoi(argv[1]));
     premierB = NULL;
 
     int i = 2;
     while (argv[i] != NULL)
     {
-        add_newnode(i - 1, ft_atoi(argv[i]), premierA);
+        add_newnode(-1, ft_atoi(argv[i]), premierA);
         i++;
     }
 

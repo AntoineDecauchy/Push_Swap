@@ -12,23 +12,6 @@
 
 #include "../push_swap.h"
 
-void	update_index(t_node *head)
-{
-	t_node	*tmp_node;
-	int		index;
-
-	if (!head)
-		return ;
-	tmp_node = head;
-	index = 0;
-	head->index = index++;
-	while (head->next != tmp_node)
-	{
-		head = head->next;
-		head->index = index++;
-	}
-}
-
 int	size_list(t_node *head)
 {
 	t_node	*tmp_node;

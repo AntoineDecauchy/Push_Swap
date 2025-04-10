@@ -27,7 +27,6 @@ void	reverse_rotate(t_node *head)
 		head = head->prev;
 	}
 	head = tmp_node;
-	update_index(head);
 }
 
 void	reverse_rotate_a(t_node *headA)
