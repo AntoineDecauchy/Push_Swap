@@ -16,24 +16,25 @@ void	sort_index(t_node *head)
 {
 	int		index;
 	int		size;
-	t_node	*tmp_node;
-	t_node	*min_node;
+	int		i;
+	t_node	*tmp;
+	t_node	*min;
 
 	size = size_list(head);
 	index = 0;
 	while (index < size)
 	{
-		min_node = NULL;
-		tmp_node = head;
-		while(tmp_node)
+		min = NULL;
+		tmp = head;
+		i = 0;
+		while (i < size)
 		{
-			if (tmp_node->index == -1 && (!min_node || tmp_node->value < min_node->value))
-				min_node = tmp_node;
+			if (tmp->index == -1 && (!min || tmp->value < min->value))
+				min = tmp;
+			tmp = tmp->next;
+			i++;
 		}
-		if (min_node)
-		{
-			min_node->index = index;
-			index++;
-		}
+		min->index = index;
+		index++;
 	}
 }

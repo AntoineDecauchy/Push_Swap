@@ -12,50 +12,42 @@
 
 #include "../push_swap.h"
 
+void	swap(t_node *head)
+{
+	int	tmp_value;
+	int	tmp_index;
+
+	tmp_value = head->value;
+	tmp_index = head->index;
+	head->value = head->next->value;
+	head->next->value = tmp_value;
+	head->index = head->next->index;
+	head->next->index = tmp_index;
+}
+
 void	swap_a(t_node *headA)
 {
-	int	tmp;
-
-	tmp = 0;
 	if (headA == NULL)
 		return ;
-	tmp = headA->value;
-	headA->value = headA->next->value;
-	headA->next->value = tmp;
+	swap(headA);
 	putstr("sa\n");
 }
 
 void	swap_b(t_node *headB)
 {
-	int	tmp;
-
-	tmp = 0;
 	if (headB == NULL)
 		return ;
-	tmp = headB->value;
-	headB->value = headB->next->value;
-	headB->next->value = tmp;
+	swap(headB);
 	putstr("sa\n");
 }
 
 void	swap_s(t_node *headA, t_node *headB)
 {
-	int	tmp;
-
-	tmp = 0;
 	if (headA == NULL && headB == NULL)
 		return ;
 	if (headA != NULL)
-	{
-		tmp = headA->value;
-		headA->value = headA->next->value;
-		headA->next->value = tmp;
-	}
+		swap(headA);
 	if (headB != NULL)
-	{
-		tmp = headB->value;
-		headB->value = headB->next->value;
-		headB->next->value = tmp;
-	}
+		swap(headB);
 	putstr("ss\n");
 }

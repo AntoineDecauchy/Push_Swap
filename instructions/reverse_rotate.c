@@ -15,18 +15,22 @@
 void	reverse_rotate(t_node *head)
 {
 	int		tmp_value;
+	int		tmp_index;
 	t_node	*tmp_node;
 
 	tmp_value = 0;
+	tmp_index = 0;
 	tmp_node = head;
 	while (head != tmp_node->next)
 	{
 		tmp_value = head->value;
 		head->value = head->prev->value;
 		head->prev->value = tmp_value;
+		tmp_index = head->index;
+		head->index = head->prev->index;
+		head->prev->index = tmp_index;
 		head = head->prev;
 	}
-	head = tmp_node;
 }
 
 void	reverse_rotate_a(t_node *headA)
