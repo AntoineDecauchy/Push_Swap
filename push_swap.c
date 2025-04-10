@@ -62,16 +62,16 @@ int main(int argc, char **argv)
     } while (tmp != premierA);
 	if (argc == 3)
 		sort_two(premierA);
-	//swap_a(premierA);
-    //push_b(&premierA, &premierB);
-	//push_b(&premierA, &premierB);
-	//push_b(&premierA, &premierB);
-	//rotate_r(premierA, premierB);
-	//reverse_rotate_r(premierA, premierB);
-	//swap_a(premierA);
-	//push_a(&premierA, &premierB);
-	//push_a(&premierA, &premierB);
-	//push_a(&premierA, &premierB);
+	swap_a(premierA);
+    push_b(&premierA, &premierB);
+	push_b(&premierA, &premierB);
+	push_b(&premierA, &premierB);
+	rotate_r(premierA, premierB);
+	reverse_rotate_r(premierA, premierB);
+	swap_a(premierA);
+	push_a(&premierA, &premierB);
+	push_a(&premierA, &premierB);
+	push_a(&premierA, &premierB);
 	printf("size = %d\n", size_list(premierA));
     printf("Après tri:\n");
     printf("Pile A :\n");
