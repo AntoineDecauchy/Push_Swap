@@ -14,7 +14,7 @@ CC = cc
 CFLAGS = -Wall -Werror -Wextra
 NAME = push_swap
 SRC = push_swap.c\
-./instructions/swap.c ./instructions/push.c ./instructions/rotate.c\
+./instructions/swap.c ./instructions/push.c ./instructions/rotate.c ./instructions/reverse_rotate.c\
 ./sort/easy_sort.c\
 ./utility/node.c ./utility/list.c\
 ./libft/libft.c
