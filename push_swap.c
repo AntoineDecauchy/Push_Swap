@@ -62,6 +62,7 @@ int main(int argc, char **argv)
     } while (tmp != premierA);
 	if (argc == 3)
 		sort_two(premierA);
+    sort_index(premierA);
 	swap_a(premierA);
     push_b(&premierA, &premierB);
 	push_b(&premierA, &premierB);
