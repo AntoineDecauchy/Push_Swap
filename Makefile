@@ -13,7 +13,11 @@
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 NAME = push_swap
-SRC = push_swap.c ./instructions/*.c ./libft/*.c ./sort/*.c ./utility/*.c
+SRC = push_swap.c\
+./instructions/swap.c ./instructions/push.c ./instructions/rotate.c\
+./sort/easy_sort.c\
+./utility/node.c ./utility/list.c\
+./libft/libft.c
 OBJ = $(SRC:.c=.o)
 HEADER = push_swap.h
 all: $(NAME)
