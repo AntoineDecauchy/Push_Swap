@@ -29,13 +29,13 @@ int main(int argc, char **argv)
         i++;
     }
     sort_index(premierA);
-    printf("Pile A initiale :\n");
+    //printf("Pile A initiale :\n");
     //t_node *stop = premierA->prev;
-    t_node *tmp = premierA;
-    do {
-        printf("%d, %d\n", tmp->value, tmp->index);
-        tmp = tmp->next;
-    } while (tmp != premierA);
+    //t_node *tmp = premierA;
+    //do {
+    //    printf("%d, %d\n", tmp->value, tmp->index);
+    //    tmp = tmp->next;
+    //} while (tmp != premierA);
 	if (argc == 3)
 		sort_two(premierA);
     radix_sort(&premierA, &premierB);
@@ -49,31 +49,31 @@ int main(int argc, char **argv)
 	//push_a(&premierA, &premierB);
 	//push_a(&premierA, &premierB);
 	//push_a(&premierA, &premierB);
-	printf("size = %d\n", size_list(premierA));
-    printf("Après tri:\n");
-    printf("Pile A :\n");
-    if (premierA)
-    {
-        tmp = premierA;
-        do {
-            printf("%d, %d\n", tmp->value, tmp->index);
-            tmp = tmp->next;
-        } while (tmp != premierA);
-    }
-    else
-        printf("Pile A vide\n");
+	//printf("size = %d\n", size_list(premierA));
+    //printf("Après tri:\n");
+    //printf("Pile A :\n");
+    //if (premierA)
+    //{
+    //    tmp = premierA;
+    //    do {
+    //        printf("%d, %d\n", tmp->value, tmp->index);
+    //        tmp = tmp->next;
+    //    } while (tmp != premierA);
+    //}
+    //else
+    //    printf("Pile A vide\n");
 
-    printf("Pile B :\n");
-    if (premierB)
-    {
-        tmp = premierB;
-        do {
-            printf("%d, %d\n", tmp->value, tmp->index);
-            tmp = tmp->next;
-        } while (tmp != premierB);
-    }
-	else
-		printf("Pile B vide\n");
+    //printf("Pile B :\n");
+    //if (premierB)
+    //{
+    //    tmp = premierB;
+    //    do {
+    //        printf("%d, %d\n", tmp->value, tmp->index);
+    //        tmp = tmp->next;
+    //    } while (tmp != premierB);
+    //}
+	//else
+	//	printf("Pile B vide\n");
 	free_list(premierA);
 	return (0);
 }
