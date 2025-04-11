@@ -23,7 +23,7 @@ int main(int argc, char **argv)
     premierB = NULL;
 
     int i = 1;
-    while (argv[i] != NULL)
+    while (split[i] != NULL)
     {
         add_newnode(-1, ft_atoi(split[i]), premierA);
         i++;
