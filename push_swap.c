@@ -11,45 +11,21 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/*
-int	main(int argc, char **argv)
-{
-	if (argc == 1)
-		return (1);
-	t_node	*premierA;
-	t_node	*premierB;
-	premierA = new_node(0, ft_atoi(argv[1]));
-	premierB = NULL;
-	int i = 2;
-	while (argv[i] != NULL)
-	{
-		add_newnode(i-1, ft_atoi(argv[i]), premierA);
-		i++;
-	}
-	t_node *stop = premierA->prev;
-	//reverse_rotate_a(premierA);
-	push_b(&premierA, &premierB);
-	while (premierA != stop)
-	{
-		printf("%d, %d\n", premierA->value, premierA->index);
-		premierA = premierA->next;
-	}
-	printf("%d, %d\n", premierA->value, premierA->index);
-}*/
+
 int main(int argc, char **argv)
 {
     if (argc == 1)
         return (1);
     t_node *premierA;
     t_node *premierB;
-
-    premierA = new_node(-1, ft_atoi(argv[1]));
+    char **split = ft_split(argv[1], ' ');
+    premierA = new_node(-1, ft_atoi(split[0]));
     premierB = NULL;
 
-    int i = 2;
+    int i = 1;
     while (argv[i] != NULL)
     {
-        add_newnode(-1, ft_atoi(argv[i]), premierA);
+        add_newnode(-1, ft_atoi(split[i]), premierA);
         i++;
     }
     sort_index(premierA);
