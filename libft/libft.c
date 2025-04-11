@@ -18,28 +18,26 @@ void	putstr(char *str)
 		write(1, str++, 1);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	size_t	i;
-	int		nb;
-	int		np;
+	long	nb;
+	char	np;
 
-	i = 0;
 	nb = 0;
 	np = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (str[i] == '-')
+		if (*str == '-')
 			np *= -1;
-		i++;
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
 		nb *= 10;
-		nb += str[i] - '0';
-		i++;
+		nb += *str - '0';
+		str++;
 	}
 	return (nb * np);
 }
