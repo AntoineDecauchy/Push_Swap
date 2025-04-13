@@ -21,8 +21,8 @@ void	check_str(char *str)
 	{
 		if ((*str < '0' || *str > '9') && *str != '-' && *str != '+')
 		{
-				putstr("Error\n");
-				exit(EXIT_FAILURE);
+			putstr("Error\n");
+			exit(EXIT_FAILURE);
 		}
 		if (*str >= '0' && *str <= '9')
 			n++;

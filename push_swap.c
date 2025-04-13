@@ -14,17 +14,17 @@
 
 int	main(int argc, char **argv)
 {
-	t_node	*headA;
-	t_node	*headB;
-	char **parse;
+	t_node	*head_a;
+	t_node	*head_b;
+	char	**parse;
 
-	headB = NULL;
+	head_b = NULL;
 	parse = parsing(argc, argv);
-	headA = create_stack(parse);
+	head_a = create_stack(parse);
 	if (!argv[2])
 		free_parse(parse);
-	sort_index(headA);
-	radix_sort(&headA, &headB);
-	free_list(headA);
+	sort_index(head_a);
+	radix_sort(&head_a, &head_b);
+	free_list(head_a);
 	return (0);
 }
