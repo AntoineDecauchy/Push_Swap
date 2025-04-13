@@ -76,7 +76,7 @@ void	check_double(char **parse)
 		{
 			if (j == i)
 				j++;
-			if (n == ft_atoi(parse[j]))
+			else if (n == ft_atoi(parse[j]))
 			{
 				putstr("Error\n");
 				exit(EXIT_FAILURE);
