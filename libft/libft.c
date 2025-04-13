@@ -41,3 +41,16 @@ long	ft_atoi(const char *str)
 	}
 	return (nb * np);
 }
+
+void	ft_free(char **split)
+{
+	size_t	j;
+
+	j = 0;
+	while (split[j])
+	{
+		free(split[j]);
+		j++;
+	}
+	free (split);
+}

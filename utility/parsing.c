@@ -72,11 +72,12 @@ void	check_double(char **parse)
 	i = 0;
 	j = 0;
 	n = 0;
-	while(parse[i])
+	while (parse[i])
 	{
 		n = ft_atoi(parse[i]);
-		while(parse[j])
+		while (parse[j])
 		{
+			j = 0;
 			if (j == i)
 				j++;
 			if (n == ft_atoi(parse[j]))
@@ -110,11 +111,6 @@ char	**parsing(int argc, char **argv)
 	{
 		check(&argv[1]);
 		check_double(&argv[1]);
-		return(&argv[1]);
+		return (&argv[1]);
 	}
-}
-
-int	main(int argc, char **argv)
-{
-	parsing(argc, argv);
 }

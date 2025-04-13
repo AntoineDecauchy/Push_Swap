@@ -55,6 +55,7 @@ void	radix_sort(t_node **headA, t_node **headB);
 
 void	putstr(char *str);
 long	ft_atoi(const char *str);
+void	ft_free(char **split);
 char	**ft_split(const char *s, char c);
 
 #endif
