@@ -19,7 +19,9 @@ int	main(int argc, char **argv)
 	char	**parse;
 
 	head_b = NULL;
+	printf("balise\n");
 	parse = parsing(argc, argv);
+	printf("balise\n");
 	head_a = create_stack(parse);
 	if (!argv[2])
 		free_parse(parse);

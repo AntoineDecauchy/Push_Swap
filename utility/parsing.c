@@ -58,6 +58,7 @@ void	check(char **parse)
 		}
 		i++;
 	}
+	printf("yo\n");
 }
 
 void	check_double(char **parse)
@@ -74,9 +75,7 @@ void	check_double(char **parse)
 		n = ft_atoi(parse[i]);
 		while (parse[j])
 		{
-			if (j == i)
-				j++;
-			else if (n == ft_atoi(parse[j]))
+			if (j != i && n == ft_atoi(parse[j]))
 			{
 				putstr("Error\n");
 				exit(EXIT_FAILURE);
