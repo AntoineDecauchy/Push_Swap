@@ -39,4 +39,10 @@ void	sort_index(t_node *head)
 	}
 }
 
-
+void	sort(t_node **headA, t_node **headB, int argc)
+{
+	if (argc == 3)
+		sort_two(*headA);
+	else
+		radix_sort(headA, headB);
+}

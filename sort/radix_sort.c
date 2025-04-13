@@ -40,11 +40,3 @@ void	radix_sort(t_node **headA, t_node **headB)
 		i++;
 	}
 }
-
-void	sort(t_node **headA, t_node **headB, int argc)
-{
-	if (argc == 3)
-		sort_two(*headA);
-	else
-		radix_sort(headA, headB);
-}
