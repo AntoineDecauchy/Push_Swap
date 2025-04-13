@@ -93,10 +93,8 @@ void	check_double(char **parse)
 
 char	**parsing(int argc, char **argv)
 {
-	int		i;
 	char	**parse;
 
-	i = 0;
 	parse = NULL;
 	if (argc == 1)
 		exit(EXIT_FAILURE);

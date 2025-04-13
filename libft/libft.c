@@ -42,7 +42,7 @@ long	ft_atoi(const char *str)
 	return (nb * np);
 }
 
-void	ft_free(char **split)
+void	free_parse(char **split)
 {
 	size_t	j;
 

@@ -16,7 +16,7 @@ NAME = push_swap
 SRC = push_swap.c\
 ./instructions/swap.c ./instructions/push.c ./instructions/rotate.c ./instructions/reverse_rotate.c\
 ./sort/easy_sort.c ./sort/sort.c\
-./utility/node.c ./utility/list.c\
+./utility/node.c ./utility/list.c ./utility/parsing.c\
 ./libft/libft.c ./libft/ft_split.c
 OBJ = $(SRC:.c=.o)
 HEADER = push_swap.h

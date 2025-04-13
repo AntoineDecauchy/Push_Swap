@@ -46,3 +46,18 @@ void	free_list(t_node *head)
 	}
 	free(head);
 }
+
+t_node	*create_stack(char **parse)
+{
+	t_node	*head;
+	int		i;
+
+	i = 1;
+	head = new_node(-1, ft_atoi(parse[0]));
+	while (parse[i] != NULL)
+	{
+		add_newnode(-1, ft_atoi(parse[i]), head);
+		i++;
+	}
+	return (head);
+}

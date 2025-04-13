@@ -26,6 +26,8 @@ typedef struct node
 	struct node	*prev;
 }				t_node;
 
+char	**parsing(int argc, char **argv);
+
 t_node	*new_node(int index, int value);
 void	add_newnode(int index, int value, t_node *first);
 t_node	*remove_node(t_node **head);
@@ -33,6 +35,7 @@ void	insert_node(t_node **head, t_node *node);
 
 int		size_list(t_node *head);
 void	free_list(t_node *head);
+t_node	*create_stack(char **parse);
 
 void	swap_a(t_node *headA);
 void	swap_b(t_node *headB);
@@ -55,7 +58,7 @@ void	radix_sort(t_node **headA, t_node **headB);
 
 void	putstr(char *str);
 long	ft_atoi(const char *str);
-void	ft_free(char **split);
+void	free_parse(char **split);
 char	**ft_split(const char *s, char c);
 
 #endif

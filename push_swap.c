@@ -10,7 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
+
 int	main(int argc, char **argv)
 {
+	t_node	*headA;
+	t_node	*headB;
+	char **parse;
 
+	headB = NULL;
+	parse = parsing(argc, argv);
+	headA = create_stack(parse);
+	if (!argv[2])
+		free_parse(parse);
+	sort_index(headA);
+	radix_sort(&headA, &headB);
+	free_list(headA);
+	return (0);
 }
