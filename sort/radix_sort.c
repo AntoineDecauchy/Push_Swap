@@ -12,14 +12,6 @@
 
 #include "../push_swap.h"
 
-void	ra_rra(t_node *head, int i)
-{
-	if ((((head)->prev->index >> i) & 1) == 0)
-		reverse_rotate_a(head);
-	else
-		rotate_a(head);
-}
-
 void	radix_sort(t_node **headA, t_node **headB)
 {
 	int		i;
@@ -38,7 +30,7 @@ void	radix_sort(t_node **headA, t_node **headB)
 		while (j < size)
 		{
 			if (((*headA)->index >> i) & 1)
-				ra_rra(*headA, i);
+				rotate_a(*headA);
 			else
 				push_b(headA, headB);
 			j++;
