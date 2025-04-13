@@ -39,10 +39,30 @@ void	sort_index(t_node *head)
 	}
 }
 
+char	check_index_order(t_node *head)
+{
+	t_node	*tmp_node;
+
+	tmp_node = head;
+	while (tmp_node->next != head)
+	{
+		if (tmp_node->index > tmp_node->next->index)
+			return (1);
+		tmp_node = tmp_node->next;
+	}
+	return (0);
+}
+
 void	sort(t_node **headA, t_node **headB, int argc)
 {
 	if (argc == 3)
 		sort_two(*headA);
+	else if (argc == 4)
+		sort_three(*headA);
 	else
-		radix_sort(headA, headB);
+	{
+		if (check_index_order(*headA))
+			radix_sort(headA, headB);
+	}
 }
+
