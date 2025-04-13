@@ -58,7 +58,6 @@ void	check(char **parse)
 		}
 		i++;
 	}
-	printf("yo\n");
 }
 
 void	check_double(char **parse)
