@@ -23,26 +23,26 @@ int	main(int argc, char **argv)
 	head_a = create_stack(parse);
 	if (!argv[2])
 		free_parse(parse);
-//	printf("Pile A initiale :\n");
-//    t_node *tmp = head_a;
-//    do {
-//        printf("%d, %d\n", tmp->value, tmp->index);
-//        tmp = tmp->next;
-//    } while (tmp != head_a);
+	printf("Pile A initiale :\n");
+    t_node *tmp = head_a;
+    do {
+        printf("%d, %d\n", tmp->value, tmp->index);
+        tmp = tmp->next;
+    } while (tmp != head_a);
 	sort_index(head_a);
-//	printf("Pile A initiale :\n");
-//    tmp = head_a;
-//    do {
-//        printf("%d, %d\n", tmp->value, tmp->index);
-//        tmp = tmp->next;
-//    } while (tmp != head_a);
-	radix_sort(&head_a, &head_b);
-//	printf("Pile A trier :\n");
-//    tmp = head_a;
-//    do {
-//        printf("%d, %d\n", tmp->value, tmp->index);
-//        tmp = tmp->next;
-//    } while (tmp != head_a);
+	printf("Pile A initiale :\n");
+    tmp = head_a;
+    do {
+        printf("%d, %d\n", tmp->value, tmp->index);
+        tmp = tmp->next;
+    } while (tmp != head_a);
+	sort(&head_a, &head_b, argc);
+	printf("Pile A trier :\n");
+    tmp = head_a;
+    do {
+        printf("%d, %d\n", tmp->value, tmp->index);
+        tmp = tmp->next;
+    } while (tmp != head_a);
 	free_list(head_a);
 	return (0);
 }

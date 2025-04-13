@@ -55,6 +55,7 @@ void	reverse_rotate_r(t_node *headA, t_node *headB);
 void	sort_two(t_node *head);
 void	sort_index(t_node *head);
 void	radix_sort(t_node **headA, t_node **headB);
+void	sort(t_node **headA, t_node **headB, int argc);
 
 void	putstr(char *str);
 long	ft_atoi(const char *str);
