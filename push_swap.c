@@ -19,7 +19,14 @@ int	main(int argc, char **argv)
 	char **parse;
 
 	headB = NULL;
+	printf("oklm\n");
 	parse = parsing(argc, argv);
+	int i = 0;
+	while(parse[i])
+	{
+		printf("%s\n", parse[i]);
+		i++;
+	}
 	headA = create_stack(parse);
 	if (!argv[2])
 		free_parse(parse);

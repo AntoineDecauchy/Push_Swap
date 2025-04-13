@@ -19,13 +19,10 @@ void	check_str(char *str)
 	n = 0;
 	while (*str)
 	{
-		if (*str < '0' && *str > '9')
+		if ((*str < '0' || *str > '9') && *str != '-' && *str != '+')
 		{
-			if (*str != '-' && *str != '+')
-			{
 				putstr("Error\n");
 				exit(EXIT_FAILURE);
-			}
 		}
 		if (*str >= '0' && *str <= '9')
 			n++;
@@ -70,14 +67,13 @@ void	check_double(char **parse)
 	long	n;
 
 	i = 0;
-	j = 0;
 	n = 0;
 	while (parse[i])
 	{
+		j = 0;
 		n = ft_atoi(parse[i]);
 		while (parse[j])
 		{
-			j = 0;
 			if (j == i)
 				j++;
 			if (n == ft_atoi(parse[j]))
