@@ -108,7 +108,7 @@ char	**parsing(int argc, char **argv)
 	}
 	else
 	{
-		if (check(parse) || check_double(parse))
+		if (check(&argv[1]) || check_double(&argv[1]))
 			exit(EXIT_FAILURE);
 		return (&argv[1]);
 	}
