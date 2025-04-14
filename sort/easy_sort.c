@@ -58,8 +58,18 @@ void	sort_four(t_node **headA, t_node **headB)
 
 void	sort_five(t_node **headA, t_node **headB)
 {
-	while ((*headA)->index != 0)
-		rotate_a(*headA);
+	if ((*headA)->prev->index == 0)
+		reverse_rotate_a(*headA);
+	else if ((*headA)->prev->prev->index == 0)
+	{
+		reverse_rotate_a(*headA);
+		reverse_rotate_a(*headA);
+	}
+	else
+	{
+		while ((*headA)->index != 0)
+			rotate_a(*headA);
+	}
 	push_b(headA, headB);
 	while ((*headA)->index != 1)
 		rotate_a(*headA);
