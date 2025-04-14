@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-void	check_str(char *str)
+char	check_str(char *str)
 {
 	int	n;
 
@@ -22,7 +22,7 @@ void	check_str(char *str)
 		if ((*str < '0' || *str > '9') && *str != '-' && *str != '+')
 		{
 			putstr("Error\n");
-			exit(EXIT_FAILURE);
+			return (1);
 		}
 		if (*str >= '0' && *str <= '9')
 			n++;
@@ -31,11 +31,12 @@ void	check_str(char *str)
 	if (!n)
 	{
 		putstr("Error\n");
-		exit(EXIT_FAILURE);
+		return (1);
 	}
+	return (0);
 }
 
-void	check(char **parse)
+char	check(char **parse)
 {
 	int		i;
 	long	n;
@@ -44,7 +45,8 @@ void	check(char **parse)
 	n = 0;
 	while (parse[i])
 	{
-		check_str(parse[i]);
+		if (check_str(parse[i]) == 1)
+			return (1);
 		i++;
 	}
 	i = 0;
@@ -54,13 +56,14 @@ void	check(char **parse)
 		if (n > INT_MAX || n < INT_MIN)
 		{
 			putstr("Error\n");
-			exit(EXIT_FAILURE);
+			return (1);
 		}
 		i++;
 	}
+	return (0);
 }
 
-void	check_double(char **parse)
+char	check_double(char **parse)
 {
 	int		i;
 	int		j;
@@ -77,12 +80,13 @@ void	check_double(char **parse)
 			if (j != i && n == ft_atoi(parse[j]))
 			{
 				putstr("Error\n");
-				exit(EXIT_FAILURE);
+				return (1);
 			}
 			j++;
 		}
 		i++;
 	}
+	return (0);
 }
 
 char	**parsing(int argc, char **argv)
@@ -95,14 +99,17 @@ char	**parsing(int argc, char **argv)
 	if (!argv[2])
 	{
 		parse = ft_split(argv[1], ' ');
-		check(parse);
-		check_double(parse);
+		if (check(parse) || check_double(parse))
+		{
+			free_parse(parse);
+			exit(EXIT_FAILURE);
+		}
 		return (parse);
 	}
 	else
 	{
-		check(&argv[1]);
-		check_double(&argv[1]);
+		if (check(parse) || check_double(parse))
+			exit(EXIT_FAILURE);
 		return (&argv[1]);
 	}
 }
