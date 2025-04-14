@@ -39,23 +39,6 @@ void	sort_index(t_node *head)
 	}
 }
 
-int	find_min_index(t_node *head)
-{
-	t_node	*tmp_node;
-	int		index;
-
-	index = head->index;
-	tmp_node = head->next;
-	while (tmp_node != head)
-	{
-		if (index > tmp_node->index)
-			index = tmp_node->index;
-		tmp_node = tmp_node->next;
-	}
-	return (index);
-	printf("salutaions\n");
-}
-
 char	check_index_order(t_node *head)
 {
 	t_node	*tmp_node;
