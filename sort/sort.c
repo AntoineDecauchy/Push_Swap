@@ -39,6 +39,23 @@ void	sort_index(t_node *head)
 	}
 }
 
+int	find_min_index(t_node *head)
+{
+	t_node	*tmp_node;
+	int		index;
+
+	index = head->index;
+	tmp_node = head->next;
+	while (tmp_node != head)
+	{
+		if (index > tmp_node->index)
+			index = tmp_node->index;
+		tmp_node = tmp_node->next;
+	}
+	return (index);
+	printf("salutaions\n");
+}
+
 char	check_index_order(t_node *head)
 {
 	t_node	*tmp_node;
@@ -59,6 +76,16 @@ void	sort(t_node **headA, t_node **headB, int argc)
 		sort_two(*headA);
 	else if (argc == 4)
 		sort_three(*headA);
+	else if (argc == 5)
+	{
+		if (check_index_order(*headA))
+			sort_four(headA, headB);
+	}
+	else if (argc == 6)
+	{
+		if (check_index_order(*headA))
+			sort_five(headA, headB);
+	}
 	else
 	{
 		if (check_index_order(*headA))

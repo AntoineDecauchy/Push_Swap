@@ -54,6 +54,8 @@ void	reverse_rotate_r(t_node *headA, t_node *headB);
 
 void	sort_two(t_node *head);
 void	sort_three(t_node *head);
+void	sort_four(t_node **headA, t_node **headB);
+void	sort_five(t_node **headA, t_node **headB);
 void	sort_index(t_node *head);
 void	radix_sort(t_node **headA, t_node **headB);
 void	sort(t_node **headA, t_node **headB, int argc);

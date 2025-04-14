@@ -46,3 +46,25 @@ void	sort_three(t_node *head)
 	else if (a < b && b > c && a > c)
 		reverse_rotate_a(head);
 }
+
+void	sort_four(t_node **headA, t_node **headB)
+{
+	while ((*headA)->index != 0)
+		rotate_a(*headA);
+	push_b(headA, headB);
+	sort_three(*headA);
+	push_a(headA, headB);
+}
+
+void	sort_five(t_node **headA, t_node **headB)
+{
+	while ((*headA)->index != 0)
+		rotate_a(*headA);
+	push_b(headA, headB);
+	while ((*headA)->index != 1)
+		rotate_a(*headA);
+	push_b(headA, headB);
+	sort_three(*headA);
+	push_a(headA, headB);
+	push_a(headA, headB);
+}
