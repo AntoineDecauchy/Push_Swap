@@ -53,18 +53,21 @@ char	check_index_order(t_node *head)
 	return (0);
 }
 
-void	sort(t_node **headA, t_node **headB, int argc)
+void	sort(t_node **headA, t_node **headB)
 {
-	if (argc == 3)
+	int	size;
+
+	size = size_list(*headA);
+	if (size == 2)
 		sort_two(*headA);
-	else if (argc == 4)
+	else if (size == 3)
 		sort_three(*headA);
-	else if (argc == 5)
+	else if (size == 4)
 	{
 		if (check_index_order(*headA))
 			sort_four(headA, headB);
 	}
-	else if (argc == 6)
+	else if (size == 5)
 	{
 		if (check_index_order(*headA))
 			sort_five(headA, headB);

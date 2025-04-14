@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	if (!argv[2])
 		free_parse(parse);
 	sort_index(head_a);
-	sort(&head_a, &head_b, argc);
+	sort(&head_a, &head_b);
 	free_list(head_a);
 	return (0);
 }

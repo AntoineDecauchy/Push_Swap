@@ -58,7 +58,7 @@ void	sort_four(t_node **headA, t_node **headB);
 void	sort_five(t_node **headA, t_node **headB);
 void	sort_index(t_node *head);
 void	radix_sort(t_node **headA, t_node **headB);
-void	sort(t_node **headA, t_node **headB, int argc);
+void	sort(t_node **headA, t_node **headB);
 
 void	putstr(char *str);
 long	ft_atoi(const char *str);
