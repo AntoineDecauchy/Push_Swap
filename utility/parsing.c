@@ -89,6 +89,18 @@ char	check_double(char **parse)
 	return (0);
 }
 
+char	check_empty(char *str)
+{
+	while (*str)
+	{
+		if (*str != ' ')
+			return (0);
+		str++;
+	}
+	putstr("Error\n");
+	return (1);
+}
+
 char	**parsing(int argc, char **argv)
 {
 	char	**parse;
@@ -98,6 +110,8 @@ char	**parsing(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	if (!argv[2])
 	{
+		if (check_empty(argv[1]))
+			exit(EXIT_FAILURE);
 		parse = ft_split(argv[1], ' ');
 		if (check(parse) || check_double(parse))
 		{
