@@ -6,7 +6,7 @@
 /*   By: adecauch <adecauch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 00:18:14 by adecauch          #+#    #+#             */
-/*   Updated: 2025/04/13 19:30:54 by adecauch         ###   ########.fr       */
+/*   Updated: 2025/05/06 06:13:44 by adecauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ char	check_empty(char *str)
 			return (0);
 		str++;
 	}
-	putstr("Error\n");
 	return (1);
 }
 
